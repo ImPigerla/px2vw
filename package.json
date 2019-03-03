@@ -1,0 +1,31 @@
+{
+  "name": "px2vw",
+  "version": "1.0.0",
+  "description": "Transform 'px' into 'vw' or 'rem' / 转为‘px’为‘vw’或者‘rem’",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImPigerla/px2vw.git"
+  },
+  "keywords": [
+    "px",
+    "vw",
+    "rem"
+  ],
+  "author": "spy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ImPigerla/px2vw/issues"
+  },
+  "homepage": "https://github.com/ImPigerla/px2vw#readme",
+  "dependencies": {
+    "css": "^2.2.4",
+    "loader-utils": "^1.2.3"
+  }
+}
