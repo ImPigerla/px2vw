@@ -1,5 +1,5 @@
 {
-  "name": "px2vw",
+  "name": "@pigerla/px2vw-loader",
   "version": "1.0.0",
   "description": "Transform 'px' into 'vw' or 'rem' / 转为‘px’为‘vw’或者‘rem’",
   "main": "index.js",
