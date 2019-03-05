@@ -54,6 +54,29 @@ You can make some configuration in your `webpack.config.js` or `webpack.base.con
 ...
 ```
 
+### Options
+
+```js
+
+// default options below
+{
+    // design size: 750px
+    datum: 750,
+    
+    // multiple of outputUnit
+    multiple: 100,
+
+    // the unit of output
+    outputUnit: 'vw',
+
+    // precision
+    precision: 6,
+
+    // ignore keyword, like /* no */ in Sass or Less
+    ignoreComment: 'no'
+}
+```
+
 ## Example
 
 Example is here: [https://github.com/ImPigerla/prerender-mobile-app](https://github.com/ImPigerla/prerender-mobile-app)
