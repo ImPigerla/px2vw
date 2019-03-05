@@ -4,7 +4,7 @@ Transform 'px' into 'vw' or 'rem'
 
 ## Demo
 
-![px2vw-demo.jpg](./assert/px2vw-demo.jpg)
+![px2vw-demo.jpg](./assets/px2vw-demo.jpg)
 
 ## Usage
 
