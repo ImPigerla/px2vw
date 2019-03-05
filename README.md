@@ -19,6 +19,9 @@ npm install --save-dev @pigerla/px2vw-loader
 You can make some configuration in your `webpack.config.js` or `webpack.base.config.js` file optionally.
 
 ```js
+
+// REMARK: '...' below means 'other configurations'
+
 ...
 {
     test: /\.scss$/,
@@ -39,7 +42,8 @@ You can make some configuration in your `webpack.config.js` or `webpack.base.con
         '@pigerla/px2vw-loader',  // 2. config here，optional
         ...
     ]
-}, {
+}, 
+{
     test: /\.vue$/,
     ...,
     loader: [
