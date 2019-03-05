@@ -1,0 +1,12 @@
+h1 {
+    background: #eee;
+    color: #888; /* color is gray */
+    border: 4px solid; /*no*/
+    height: 20px;
+}
+h2 {
+    width: 100%;
+    height: 30px;
+    margin: 15px;
+    font-size: 28px; /* no */
+    color: red;}

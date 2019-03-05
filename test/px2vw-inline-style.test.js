@@ -1,19 +1,19 @@
 'use strict';
 
 const assert = require('power-assert');
-const Px2vw = require('../lib/px2vw');
+const Px2vwInlineStyle = require('../lib/px2vw-inline-style');
 const {resolve} = require('path')
 const fs = require('fs');
 
-describe('lib/px2vw.js', () => {
+describe('lib/px2vw-inline-style.js', () => {
     describe('constructor', () => {
-        it('Px2vw should be constructor', () => {
-            assert(Px2vw.prototype.constructor === Px2vw)
+        it('Px2vwInlineStyle should be constructor', () => {
+            assert(Px2vwInlineStyle.prototype.constructor === Px2vwInlineStyle)
         });
     })
 
     describe('#calculateValue(type, value)', () => {
-        const px2vwInstance = new Px2vw()
+        const px2vwInstance = new Px2vwInlineStyle()
 
         it('type should be "rem"', () => {
             assert(px2vwInstance.calculateValue('rem', '100px').indexOf('rem'))
@@ -25,26 +25,26 @@ describe('lib/px2vw.js', () => {
     })
 
     describe('#generateVw(cssText)', () => {
-        const px2vwDefInstance = new Px2vw()
-        const px2vwInstance = new Px2vw({
+        const px2vwDefInstance = new Px2vwInlineStyle()
+        const px2vwInstance = new Px2vwInlineStyle({
             datum: 75,
             multiple: 10,
             outputUnit: 'rem',
             precision: 10,
         })
-        const srcPath = resolve(__dirname, '../assets/test.css');
+        const srcPath = resolve(__dirname, '../assets/template.vue');
         const srcText = fs.readFileSync(srcPath, {encoding: 'utf8'});
 
         it('should output the default file', () => {
-            var expectedPath = resolve(__dirname, '../assets/test.expected.vw.css');
+            var expectedPath = resolve(__dirname, '../assets/template.vw.vue');
             var outputText = px2vwDefInstance.generateVw(srcText);
-            assert.equal(outputText, fs.readFileSync(expectedPath, {encoding: 'utf8'}).trim());
+            assert.equal(outputText, fs.readFileSync(expectedPath, {encoding: 'utf8'}));
         });
 
         it('should output the right "rem" file', () => {
-            var expectedPath = resolve(__dirname, '../assets/test.expected.rem.css');
+            var expectedPath = resolve(__dirname, '../assets/template.rem.vue');
             var outputText = px2vwInstance.generateVw(srcText);
-            assert.equal(outputText, fs.readFileSync(expectedPath, {encoding: 'utf8'}).trim());
+            assert.equal(outputText, fs.readFileSync(expectedPath, {encoding: 'utf8'}));
         });
     })
 });

@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "mocha ./test/px2vw.test.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
