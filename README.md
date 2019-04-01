@@ -61,19 +61,38 @@ You can make some configuration in your `webpack.config.js` or `webpack.base.con
 // default options below
 {
     // design size: 750px
+    // 一般设计图尺寸
     datum: 750,
     
     // multiple of outputUnit
+    // 缩放倍数
     multiple: 100,
 
     // the unit of output
+    // 转为目标单位
     outputUnit: 'vw',
 
     // precision
+    // 四舍五入小数点后6位
     precision: 6,
 
     // ignore keyword, like /* no */ in Sass or Less
+    // 忽略转化的属性
     ignoreComment: 'no'
+}
+```
+
+
+Good practice for then 'rem' unit's configuration
+
+```js
+{
+    // recommend
+    // 推荐
+    multiple: 10,
+    
+    // 'rem' unit
+    outputUnit: 'rem'
 }
 ```
 
