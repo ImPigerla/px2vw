@@ -86,6 +86,8 @@ You can make some configuration in your `webpack.config.js` or `webpack.base.con
 Good practice for then 'rem' unit's configuration
 
 ```scss
+// global scss configuration
+
 // html font-size
 html {
     font-size: (100 / 750 ) * 100vw;
@@ -104,9 +106,12 @@ body {
 ```
 
 ```js
+// loader configuration
 {
-    // 'rem' unit
-    outputUnit: 'rem'
+    loader: '@pigerla/px2vw-loader',
+    options: {
+        outputUnit: 'rem'
+    }
 }
 ```
 
