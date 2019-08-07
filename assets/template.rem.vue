@@ -1,5 +1,5 @@
 <template>
     <section class="index-page">
-        <img src="~images/image_1.gif" style="height: 160rem;" alt="bg">
+        <img src="~images/image_1.gif" style="height: 120rem;" alt="bg">
     </section>
 </template>

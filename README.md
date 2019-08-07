@@ -4,7 +4,7 @@ Transform 'px' into 'vw' or 'rem'
 
 ## Demo
 
-![px2vw-demo.jpg](./assets/px2vw-demo.jpg)
+![px2vw-demo.jpg](./assets/px2vw-demo.png)
 
 ## Usage
 
@@ -85,12 +85,26 @@ You can make some configuration in your `webpack.config.js` or `webpack.base.con
 
 Good practice for then 'rem' unit's configuration
 
+```scss
+// html font-size
+html {
+    font-size: (100 / 750 ) * 100vw;
+
+    @media screen and (min-width: 750px) {
+      font-size: 100px; /*no*/
+    }
+}
+
+// set max-width and center
+body {
+    height: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+```
+
 ```js
 {
-    // recommend
-    // 推荐
-    multiple: 10,
-    
     // 'rem' unit
     outputUnit: 'rem'
 }
