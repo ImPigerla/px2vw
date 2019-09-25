@@ -56,7 +56,7 @@ You can make some configuration in your `webpack.config.js` or `webpack.base.con
 ...
 ```
 
-### Options
+### Options 选项说明
 
 ```js
 
@@ -118,6 +118,6 @@ body {
 }
 ```
 
-## Example
+## Example 项目例子
 
 Example is here: [https://github.com/ImPigerla/prerender-mobile-app](https://github.com/ImPigerla/prerender-mobile-app)
