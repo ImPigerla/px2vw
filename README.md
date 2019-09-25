@@ -2,21 +2,23 @@
 
 Transform 'px' into 'vw' or 'rem'
 
-## Demo
+## Demo 例子截图
 
 ![px2vw-demo.jpg](./assets/px2vw-demo.png)
 
 ## Usage
 
-### Install package
+### Install package 安装
 
 ```bash
 npm install --save-dev @pigerla/px2vw-loader
 ```
 
-### Configuration
+### Configuration 配置
 
 You can make some configuration in your `webpack.config.js` or `webpack.base.config.js` file optionally.
+
+在项目的webpack配置loaders项中设置如下配置
 
 ```js
 
@@ -28,7 +30,7 @@ You can make some configuration in your `webpack.config.js` or `webpack.base.con
     ...,
     use: [
         ...,
-        'css-loader',
+        'css-loader',             // 插在css-loader前面
         '@pigerla/px2vw-loader',  // 1. config here，optional
         ...
     ]
@@ -38,7 +40,7 @@ You can make some configuration in your `webpack.config.js` or `webpack.base.con
     ...,
     use: [
         ...,
-        'css-loader',
+        'css-loader',             // 插在css-loader前面
         '@pigerla/px2vw-loader',  // 2. config here，optional
         ...
     ]
@@ -47,7 +49,7 @@ You can make some configuration in your `webpack.config.js` or `webpack.base.con
     test: /\.vue$/,
     ...,
     loader: [
-        'vue-loader', 
+        'vue-loader',                                  // 插在css-loader前面
         '@pigerla/px2vw-loader/inline-style-loader.js' // 3. config here，optional
     ]
 }
@@ -83,12 +85,13 @@ You can make some configuration in your `webpack.config.js` or `webpack.base.con
 ```
 
 
-Good practice for then 'rem' unit's configuration
+Good practice for the 'rem' unit's configuration 
+比较佳样式实践如下
 
 ```scss
-// global scss configuration
+// global scss configuration 全局的scss/css样式
 
-// html font-size
+// html font-size 
 html {
     font-size: (100 / 750 ) * 100vw;
 
