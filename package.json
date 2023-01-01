@@ -26,7 +26,7 @@
   "homepage": "https://github.com/ImPigerla/px2vw-loader#readme",
   "dependencies": {
     "css": "^2.2.4",
-    "loader-utils": "^1.2.3"
+    "loader-utils": "^3.2.1"
   },
   "devDependencies": {
     "mocha": "^6.0.2",
